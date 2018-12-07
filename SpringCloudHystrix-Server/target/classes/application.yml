@@ -1,0 +1,27 @@
+#Application Name
+spring:
+ application:
+  name: Hystrix-Server
+ 
+#Component Info 
+info:
+ component: Hystrix-Server
+ 
+#Port - If 0 get random port
+server: 
+ port: 8090
+ 
+#Eureka Instance ID
+eureka:
+ instance:
+  instanceId: ${spring.application.name}:${server.port} 
+ 
+#Service Registration Method 
+cloud:
+ services:
+  registrationMethod: route
+ 
+#Disable HTTP Basic Authentication
+security:
+ basic:
+  enabled: false

@@ -25,3 +25,10 @@ cloud:
 security:
  basic:
   enabled: false
+
+#Expose Hystrix
+management:
+ endpoints:
+  web: 
+   exposure:
+    include: hystrix.stream

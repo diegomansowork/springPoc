@@ -23,6 +23,7 @@ public class BreakerPatternService {
 	    return this.restTemplate.getForObject(uri, String.class);
 	  }
 
+	  @HystrixCommand
 	  public String reliable() {
 	    return "Esto es lo que se devuelve en modo reliable";
 	  }

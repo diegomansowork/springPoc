@@ -28,7 +28,7 @@ security:
 
 #Expose Hystrix
 management:
- endpoints:
-  web: 
-   exposure:
-    include: hystrix.stream
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream, info, health
